@@ -20,12 +20,7 @@ import './core/lazy_use' // use lazy load components
 import './permission' // permission control
 import './utils/filter' // global filter
 import './global.less' // global style
-import { injectSpeedInsights } from '@vercel/speed-insights'
-
 Vue.config.productionTip = false
-
-// Initialize Vercel Speed Insights
-injectSpeedInsights()
 
 // Suppress noisy ResizeObserver loop errors (harmless in most cases on responsive layouts)
 if (typeof window !== 'undefined') {
