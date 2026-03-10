@@ -1,0 +1,102 @@
+module.exports = {
+    processors: [],
+    plugins: ['stylelint-order'],
+    extends: [
+        'stylelint-config-standard',
+        'stylelint-config-css-modules'
+    ],
+    rules: {
+        'selector-class-pattern': null,
+        'string-quotes': 'single', // single quotes
+        'at-rule-empty-line-before': null,
+        'at-rule-no-unknown': null,
+        'at-rule-name-case': 'lower', // @-rule name casing
+        'length-zero-no-unit': true, // disallow units for zero lengths (auto-fixable)
+        'shorthand-property-no-redundant-values': true, // shorthand properties
+        'number-leading-zero': 'never', // no leading zero for decimals
+        'declaration-block-no-duplicate-properties': null, // allow duplicate properties
+        'no-descending-specificity': null, // allow lower specificity selectors after higher ones
+        'selector-max-id': 3, // max number of ID selectors
+        'max-nesting-depth': 4,
+        'indentation': [2, { // indentation warning
+            'severity': 'warning'
+        }],
+        'order/properties-order': [ // property order
+            'position',
+            'top',
+            'right',
+            'bottom',
+            'left',
+            'z-index',
+            'display',
+            'float',
+            'width',
+            'height',
+            'max-width',
+            'max-height',
+            'min-width',
+            'min-height',
+            'padding',
+            'padding-top',
+            'padding-right',
+            'padding-bottom',
+            'padding-left',
+            'margin',
+            'margin-top',
+            'margin-right',
+            'margin-bottom',
+            'margin-left',
+            'margin-collapse',
+            'margin-top-collapse',
+            'margin-right-collapse',
+            'margin-bottom-collapse',
+            'margin-left-collapse',
+            'overflow',
+            'overflow-x',
+            'overflow-y',
+            'clip',
+            'clear',
+            'font',
+            'font-family',
+            'font-size',
+            'font-smoothing',
+            'osx-font-smoothing',
+            'font-style',
+            'font-weight',
+            'line-height',
+            'letter-spacing',
+            'word-spacing',
+            'color',
+            'text-align',
+            'text-decoration',
+            'text-indent',
+            'text-overflow',
+            'text-rendering',
+            'text-size-adjust',
+            'text-shadow',
+            'text-transform',
+            'word-break',
+            'word-wrap',
+            'white-space',
+            'vertical-align',
+            'list-style',
+            'list-style-type',
+            'list-style-position',
+            'list-style-image',
+            'pointer-events',
+            'cursor',
+            'background',
+            'background-color',
+            'border',
+            'border-radius',
+            'content',
+            'outline',
+            'outline-offset',
+            'opacity',
+            'filter',
+            'visibility',
+            'size',
+            'transform'
+        ]
+    }
+}

@@ -1,0 +1,71 @@
+# ============================================
+# MarketLabs - Backend API Repository
+# ============================================
+
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.local
+.env.*.local
+server/.env
+
+# ========================
+# IDE & OS
+# ========================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.iml
+
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+*.egg
+.eggs/
+venv/
+.venv/
+env/
+
+# ========================
+# Node / Web Frontend
+# ========================
+node_modules/
+web/.next/
+web/.env.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Keep the built frontend assets
+!web/dist/
+!server/dist/
+
+# ========================
+# Local backups
+# ========================
+web-vue-backup/
+
+# ========================
+# Logs & Runtime Data
+# ========================
+*.log
+server/logs/
+server/data/marketlabs.db
+server/data/memory/
+
+# ========================
+# Docker
+# ========================
+docker-compose.override.yml

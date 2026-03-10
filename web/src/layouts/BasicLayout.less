@@ -1,0 +1,422 @@
+@import '~ant-design-vue/es/style/themes/default.less';
+
+/* ========== Completely hide ant-layout-footer ========== */
+:global {
+  /* Globally hide all ant-layout-footer */
+  .ant-layout-footer,
+  footer.ant-layout-footer,
+  .ant-pro-layout .ant-layout-footer,
+  .ant-layout .ant-layout-footer {
+    display: none !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    min-height: 0 !important;
+    visibility: hidden !important;
+    overflow: hidden !important;
+  }
+}
+
+/* ========== ant-layout-header theme adaptation ========== */
+/* Global styles: auto-adapt based on body or layout theme class */
+:global {
+  /* Dark theme ant-layout-header */
+  body.dark .ant-layout-header,
+  body.realdark .ant-layout-header,
+  .ant-layout.dark .ant-layout-header,
+  .ant-layout.realdark .ant-layout-header,
+  .ant-pro-layout.dark .ant-layout-header,
+  .ant-pro-layout.realdark .ant-layout-header {
+    background: #001529 !important;
+    border-bottom: 1px solid #1f1f1f !important;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+
+    /* All text and icons inside header */
+    * {
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+
+    /* Icon buttons inside header */
+    .anticon {
+      color: rgba(255, 255, 255, 0.85) !important;
+
+      &:hover {
+        color: #1890ff !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        border-radius: 4px;
+      }
+    }
+
+    /* Links inside header */
+    a {
+      color: rgba(255, 255, 255, 0.85) !important;
+
+      &:hover {
+        color: #1890ff !important;
+      }
+    }
+
+    /* Tooltip container inside header */
+    .ant-tooltip-open {
+      .anticon {
+        color: rgba(255, 255, 255, 0.85) !important;
+      }
+    }
+  }
+
+
+  /* Light theme ant-layout-header (ensure default style override) */
+  body.light .ant-layout-header,
+  .ant-layout.light .ant-layout-header,
+  .ant-pro-layout.light .ant-layout-header {
+    background: #fff !important;
+    border-bottom: 1px solid #e8e8e8 !important;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08) !important;
+    color: rgba(0, 0, 0, 0.85) !important;
+  }
+
+  /* ========== ant-layout-content theme adaptation (main content area) ========== */
+  /* Dark theme content area */
+  body.dark .ant-layout-content,
+  body.realdark .ant-layout-content,
+  .ant-layout.dark .ant-layout-content,
+  .ant-layout.realdark .ant-layout-content,
+  .ant-pro-layout.dark .ant-layout-content,
+  .ant-pro-layout.realdark .ant-layout-content {
+    background: #141414 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+
+
+  /* Light theme content area */
+  body.light .ant-layout-content,
+  .ant-layout.light .ant-layout-content,
+  .ant-pro-layout.light .ant-layout-content {
+    background: #f0f2f5 !important;
+    color: rgba(0, 0, 0, 0.85) !important;
+  }
+
+
+
+
+
+  /* ========== GlobalHeader core styles (based on .ant-pro-global-header) ========== */
+  /* Dark theme .ant-pro-global-header - key styles controlling the top header bar */
+  body.dark .ant-pro-global-header,
+  body.realdark .ant-pro-global-header,
+  .ant-layout.dark .ant-pro-global-header,
+  .ant-layout.realdark .ant-pro-global-header,
+  .ant-pro-layout.dark .ant-pro-global-header,
+  .ant-pro-layout.realdark .ant-pro-global-header,
+  body.dark .ant-layout-header .ant-pro-global-header,
+  body.realdark .ant-layout-header .ant-pro-global-header,
+  .ant-pro-layout.dark .ant-layout-header .ant-pro-global-header,
+  .ant-pro-layout.realdark .ant-layout-header .ant-pro-global-header {
+    /* Core: background color and border */
+    background: #001529 !important;
+    border-bottom: 1px solid #1f1f1f !important;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+
+    /* Force all child element text color */
+    * {
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+
+    /* Logo area */
+    .ant-pro-global-header-logo {
+      background: transparent !important;
+      color: rgba(255, 255, 255, 0.85) !important;
+
+      h1 {
+        color: rgba(255, 255, 255, 0.85) !important;
+      }
+
+      img {
+        opacity: 0.9;
+      }
+
+      * {
+        color: rgba(255, 255, 255, 0.85) !important;
+      }
+    }
+  }
+
+  /* Header content area (middle section, contains refresh button etc.) */
+  .ant-pro-global-header-content {
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+
+    * {
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+
+    /* Refresh button and other icons */
+    .anticon {
+      color: rgba(255, 255, 255, 0.85) !important;
+
+      &:hover {
+        color: #1890ff !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        border-radius: 4px;
+      }
+    }
+
+    /* Icons inside tooltips */
+    .ant-tooltip-open .anticon {
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+  }
+
+  /* Header right content area (avatar, language selector, settings button) */
+  .ant-pro-global-header-index-right {
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+
+    * {
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+
+    /* Action buttons (avatar, language, settings) */
+    .ant-pro-global-header-index-action {
+      color: rgba(255, 255, 255, 0.85) !important;
+
+      &:hover {
+        color: #1890ff !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+      }
+
+      .anticon {
+        color: rgba(255, 255, 255, 0.85) !important;
+      }
+    }
+
+    /* Avatar area */
+    .ant-pro-account-avatar {
+      color: rgba(255, 255, 255, 0.85) !important;
+
+      span {
+        color: rgba(255, 255, 255, 0.85) !important;
+      }
+
+      .antd-pro-global-header-index-avatar {
+        background: rgba(255, 255, 255, 0.25) !important;
+      }
+    }
+
+    /* Dropdown menu trigger */
+    .ant-pro-drop-down,
+    .ant-dropdown-trigger {
+      color: rgba(255, 255, 255, 0.85) !important;
+
+      &:hover {
+        color: #1890ff !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+      }
+
+      .anticon {
+        color: rgba(255, 255, 255, 0.85) !important;
+      }
+    }
+  }
+
+  /* Link styles */
+  a {
+    color: rgba(255, 255, 255, 0.85) !important;
+
+    &:hover {
+      color: #1890ff !important;
+    }
+  }
+
+  /* All icons */
+  .anticon {
+    color: rgba(255, 255, 255, 0.85) !important;
+
+    &:hover {
+      color: #1890ff !important;
+    }
+  }
+
+  /* Light theme .ant-pro-global-header */
+  body.light .ant-pro-global-header,
+  .ant-layout.light .ant-pro-global-header,
+  .ant-pro-layout.light .ant-pro-global-header,
+  body.light .ant-layout-header .ant-pro-global-header,
+  .ant-pro-layout.light .ant-layout-header .ant-pro-global-header {
+    background: #fff !important;
+    border-bottom: 1px solid #e8e8e8 !important;
+    color: rgba(0, 0, 0, 0.85) !important;
+  }
+}
+
+/* ========== Global layout theme adaptation - enhanced overrides ========== */
+:global(.ant-pro-layout) {
+  /* Dark theme full layout */
+  &.dark,
+  &.realdark {
+    /* 0. Base layout background - ensure overall dark background */
+    :global(.ant-layout) {
+      background-color: #001529 !important;
+    }
+
+    /* 1. Top header */
+    :global(.ant-layout-header) {
+      background: #001529 !important;
+      border-bottom: 1px solid #1f1f1f !important;
+      color: rgba(255, 255, 255, 0.85) !important;
+
+      :global(.ant-pro-global-header) {
+        background: #001529 !important;
+        border-bottom: none !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+
+        * {
+          color: rgba(255, 255, 255, 0.85) !important;
+        }
+      }
+    }
+
+    /* 2. Main content area */
+    :global(.ant-layout-content) {
+      background: #141414 !important;
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+
+    :global(.ant-pro-basicLayout-content) {
+      background: #141414 !important;
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+
+  }
+
+  /* Light theme full layout */
+  &.light {
+    /* 0. Base layout background */
+    :global(.ant-layout) {
+      background-color: #f0f2f5 !important;
+    }
+
+    /* 1. Top header */
+    :global(.ant-layout-header) {
+      background: #fff !important;
+      border-bottom: 1px solid #e8e8e8 !important;
+      color: rgba(0, 0, 0, 0.85) !important;
+    }
+
+    /* 2. Main content area */
+    :global(.ant-layout-content) {
+      background: #f0f2f5 !important;
+      color: rgba(0, 0, 0, 0.85) !important;
+    }
+
+    :global(.ant-pro-basicLayout-content) {
+      background: #f0f2f5 !important;
+      color: rgba(0, 0, 0, 0.85) !important;
+    }
+
+  }
+}
+
+.ant-pro-global-header-index-right {
+  margin-right: 8px;
+
+  &.ant-pro-global-header-index-dark {
+    .ant-pro-global-header-index-action {
+      color: hsl(0deg 0% 100% / 85%);
+
+      &:hover {
+        background: #1890ff;
+      }
+    }
+
+    /* Dark theme avatar dropdown menu */
+    .ant-pro-account-avatar {
+      color: rgba(255, 255, 255, 0.85);
+
+      .antd-pro-global-header-index-avatar {
+        background: rgba(255, 255, 255, 0.25) !important;
+      }
+
+      span {
+        color: rgba(255, 255, 255, 0.85);
+      }
+    }
+
+    /* Language selector and settings button */
+    .ant-pro-drop-down {
+      color: rgba(255, 255, 255, 0.85);
+
+      &:hover {
+        color: #1890ff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+    }
+  }
+
+  /* Light theme avatar styles */
+  .ant-pro-account-avatar {
+    .antd-pro-global-header-index-avatar {
+      margin: ~'calc((@{layout-header-height} - 24px) / 2)' 0;
+      margin-right: 8px;
+      color: @primary-color;
+      vertical-align: top;
+      background: rgb(255 255 255 / 85%);
+    }
+  }
+
+  .menu {
+    .anticon {
+      margin-right: 8px;
+    }
+
+    .ant-dropdown-menu-item {
+      min-width: 100px;
+    }
+  }
+}
+
+/* Dark theme dropdown menu styles */
+:global {
+  .ant-pro-layout.dark,
+  .ant-pro-layout.realdark {
+    .ant-dropdown-menu {
+      background: #1f1f1f !important;
+      border: 1px solid #303030 !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+
+      .ant-dropdown-menu-item {
+        color: rgba(255, 255, 255, 0.85) !important;
+
+        &:hover {
+          background: #262626 !important;
+          color: #1890ff !important;
+        }
+      }
+
+      .ant-dropdown-menu-item-divider {
+        background: #303030 !important;
+      }
+    }
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  :global {
+    /* Use more specific selectors to force override */
+    .ant-layout-header .ant-pro-global-header .ant-pro-global-header-logo,
+    .ant-pro-layout .ant-layout-header .ant-pro-global-header .ant-pro-global-header-logo,
+    body .ant-layout-header .ant-pro-global-header .ant-pro-global-header-logo,
+    .ant-pro-global-header-logo {
+      padding: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+  }
+}
