@@ -20,8 +20,12 @@ import './core/lazy_use' // use lazy load components
 import './permission' // permission control
 import './utils/filter' // global filter
 import './global.less' // global style
+import { injectSpeedInsights } from '@vercel/speed-insights'
 
 Vue.config.productionTip = false
+
+// Initialize Vercel Speed Insights
+injectSpeedInsights()
 
 // Suppress noisy ResizeObserver loop errors (harmless in most cases on responsive layouts)
 if (typeof window !== 'undefined') {
@@ -40,9 +44,9 @@ if (typeof window !== 'undefined') {
 // mount axios to `Vue.$http` and `this.$http`
 Vue.use(VueAxios)
 // use pro-layout components
-Vue.component('pro-layout', ProLayout)
-Vue.component('page-container', PageHeaderWrapper)
-Vue.component('page-header-wrapper', PageHeaderWrapper)
+Vue.component('ProLayout', ProLayout)
+Vue.component('PageContainer', PageHeaderWrapper)
+Vue.component('PageHeaderWrapper', PageHeaderWrapper)
 
 window.umi_plugin_ant_themeVar = themePluginConfig.theme
 
