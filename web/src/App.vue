@@ -9,11 +9,16 @@
 <script>
 import { domTitle, setDocumentTitle } from '@/utils/domUtil'
 import { i18nRender } from '@/locales'
+import { inject } from '@vercel/analytics'
 
 export default {
   data () {
     return {
     }
+  },
+  mounted () {
+    // Initialize Vercel Web Analytics
+    inject()
   },
   computed: {
     locale () {
