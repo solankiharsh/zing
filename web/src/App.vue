@@ -9,6 +9,7 @@
 <script>
 import { domTitle, setDocumentTitle } from '@/utils/domUtil'
 import { i18nRender } from '@/locales'
+import { inject } from '@vercel/analytics'
 
 export default {
   data () {
@@ -30,6 +31,13 @@ export default {
     theme () {
       return this.$store.state.app.theme
     }
+  },
+  created () {
+    // Initialize Vercel Web Analytics
+    inject({
+      mode: 'auto',
+      framework: 'vue'
+    })
   },
   watch: {
     theme: {
