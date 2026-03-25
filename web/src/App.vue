@@ -9,8 +9,13 @@
 <script>
 import { domTitle, setDocumentTitle } from '@/utils/domUtil'
 import { i18nRender } from '@/locales'
+import { injectSpeedInsights } from '@vercel/speed-insights'
 
 export default {
+  mounted () {
+    // Initialize Vercel Speed Insights
+    injectSpeedInsights()
+  },
   data () {
     return {
     }
